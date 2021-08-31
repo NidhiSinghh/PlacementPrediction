@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="eg">
+<head>
+    <meta charset="utf-8">
+    <title>Predict</title>
+     <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+     <style>
+         .main{
+            text-align:center;
+            top:120px;
+            left:600px;
+            
+             width:700px; 
+            background-color:gainsboro;
+            align-items:center;
+            position:fixed;
+            
+        }
+        div{
+            padding:15px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:40px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+            text-align:center;
+        }
+       
+        body{
+            background-color: black;
+        }
+
+
+        /* .row1{
+             display:none; 
+             display:block; 
+        }  */
+     </style>
+</head>
+<body style="text-align: center;">
+   <div class="main">
+         <h1>Please enter the following values!</h1>
+          <form action="result">
+              <div class="row">
+                  <div class="col-sm-4" style="background-color:Turquoise">
+                     <!-- <p>Gender</p>
+                      <input type="text" name="n1"> -->
+                      <label for="gender">Gender:</label>
+                      <select name="n1" >
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                     
+                      </select>
+                  </div>
+                  <div class="col-sm-4" style="background-color:RosyBrown">
+                     <p>SSC Percentage</p>
+                      <input type="text" name="n2">
+                  </div>
+                  <div class="col-sm-4" style="background-color:Turquoise">
+                     <!-- <p>SSC Board</p>
+                      <input type="text" name="n3"> -->
+                      <label for="board">SSC Board:</label>
+                      <select name="n3" >
+                        <option value="Others">Others</option>
+                        <option value="Central">Central</option>
+                     
+                      </select>
+                  </div>
+                  </div>
+              <div class="row">
+                  <div class="col-sm-4" style="background-color:RosyBrown">
+                     <p>HSC Percentage</p>
+                      <input type="text" name="n4">
+                  </div>
+
+              
+                  <div class="col-sm-4" style="background-color:Turquoise">
+                     <!-- <p>HSC Board</p>
+                      <input type="text" name="n5"> -->
+                      <label for="board">HSC Board:</label>
+                      <select name="n5" >
+                        <option value="Others">Others</option>
+                        <option value="Central">Central</option>
+                     
+                      </select>
+                  </div>
+                  <div class="col-sm-4" style="background-color:RosyBrown">
+                     <!-- <p>HSC Stream</p>
+                      <input type="text" name="n6"> -->
+                      <label for="hsc_stream">HSC Stream:</label>
+                      <select name="n6" >
+                        <option value="Commerce">Commerce</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Science">Science</option>
+                        
+                      </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4" style="background-color:Turquoise">
+                     <p>Degree percentage</p>
+                      <input type="text" name="n7">
+                  </div>
+                  <div class="col-sm-4" style="background-color:RosyBrown">
+                     <!-- <p>Degree Technology</p>
+                      <input type="text" name="n8"> -->
+                      <label for="degree_technology">Degree Techonlogy:</label>
+                      <select name="n8" >
+                        <option value="Comm&Mgmt">Comm&Management</option>
+                    
+                        <option value="Sci&tech">Sci&Tech</option>
+                        <option value="Others">Others</option>
+                        
+                      </select>
+                  </div>
+              
+                  
+                  <div class="col-sm-4" style="background-color:Turquoise">
+                     <!-- <p>Work Experience</p>
+                      <input type="text" name="n9"> -->
+                      <label for="board">Work Experience</label>:</label>
+                      <select name="n9" >
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                     
+                      </select>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="col-sm-4" style="background-color:RosyBrown">
+                     <p>ETest percentage</p>
+                      <input type="text" name="n10">
+                  </div>
+                  <div class="col-sm-4" style="background-color:Turquoise">
+                     <!-- <p>Specialization</p>
+                      <input type="text" name="n11"> -->
+                      <label for="board">Specialization</label>:</label>
+                      <select name="n11" >
+                        <option value="Mkt&Fin">Mkt&Fin</option>
+                        <option value="Mkt&HR">Mkt&HR</option>
+                     
+                      </select>
+                      
+                  </div>
+                  <div class="col-sm-4" style="background-color:RosyBrown">
+                     <p>MBA percentage</p>
+                      <input type="text" name="n12">
+                  </div>
+              </div>
+             <div id="demo" class="row">
+                  <input type="submit" value="PREDICT">
+              </div>
+              
+          </form>
+          <div class="row1" id="demo">
+            <h2>{{result2}}</h2>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!-- <div id="demo" class="row">
+    <input type="submit" value="PREDICT">
+</div>
+
+</form>
+<div class="row1" id="demo">
+<h2>{{result2}}</h2>
+</div> -->
+ 
